@@ -1,11 +1,12 @@
+import React, { useEffect } from 'react';
+import { Routes, Route, useLocation } from "react-router-dom";
 import './App.css'
 
-function App() {
+import Login from './pages/login'
 
-  return (
-    <>
-     
-    </>
+function App() {
+return (
+  <Login />
   )
 }
 
