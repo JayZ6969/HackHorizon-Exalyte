@@ -1,7 +1,6 @@
 import React, { useState } from 'react';
 import { Routes, Route, useNavigate } from 'react-router-dom';
-import Login from '../components/Login';
-import Signup from '../components/SignUp';
+
 
 const classes = {
   container: "flex flex-col items-center justify-center h-screen bg-gray-200 gap-4",
@@ -38,10 +37,7 @@ const LoginPage = () => {
           Log In
         </div>
       </div>
-      <Routes>
-        <Route path="/login" element={<Login />} />
-        <Route path="/signup" element={<Signup />} />
-      </Routes>
+      
     </div>
   );
 };

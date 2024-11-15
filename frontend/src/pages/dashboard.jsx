@@ -1,7 +1,6 @@
 import React, { useState } from 'react';
 import { Routes, Route, useNavigate } from 'react-router-dom';
-import CreateTest from '../components/CreateTest';
-import ViewTest from '../components/ViewTest';
+
 
 const classes = {
   container: "flex flex-col w-full items-center justify-center gap-4",
@@ -41,10 +40,7 @@ const Dashboard = () => {
           View Tests
         </div>
       </div>
-      <Routes>
-        <Route path="/createtest" element={<CreateTest />} />
-        <Route path="/viewtest" element={<ViewTest />} />
-      </Routes>
+      
     </div>
   );
 };
