@@ -1,11 +1,14 @@
+import React, { useEffect } from 'react';
+import { Routes, Route, useLocation } from "react-router-dom";
 import './App.css'
 
-function App() {
+import CodeGenerator from './pages/CodeGenerator';
+import Dashboard from './pages/Dashboard';
+import LoginPage from './pages/LoginPage'
 
-  return (
-    <>
-     
-    </>
+function App() {
+return (
+  <Dashboard />
   )
 }
 
