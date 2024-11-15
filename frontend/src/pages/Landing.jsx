@@ -62,8 +62,8 @@ const Landing = () => {
           </div>
         </div>
         <div className={classes.buttons}>
-          <button className={classes.button1}><a href='/join'>Join test</a></button>
-          <button className={classes.button2}><a href='/signup'>Get Started</a></button>
+          <button className={classes.button1}><a href='/Join'>Join test</a></button>
+          <button className={classes.button2}><a href='/Signup'>Get Started</a></button>
         </div>
       </div>
       <div className={classes.features}>

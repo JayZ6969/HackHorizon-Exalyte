@@ -1,9 +1,8 @@
 import React, { useState } from 'react';
-import { Routes, Route, useNavigate } from 'react-router-dom';
-
+import { useNavigate } from 'react-router-dom';
 
 const classes = {
-  container: "flex flex-col items-center justify-center h-screen gap-4",
+  container: "flex flex-col items-center justify-center gap-4",
   header: "text-4xl font-bold text-gray-800",
   selector: "flex items-center justify-center gap-4",
   selectorbuttons: "flex items-center justify-center px-4 py-2 rounded-lg shadow-lg text-gray-800 font-semibold cursor-pointer",
@@ -12,7 +11,7 @@ const classes = {
 };
 
 const LoginPage = () => {
-  const [activeButton, setActiveButton] = useState('login');
+  const [activeButton, setActiveButton] = useState('Signup');
   const navigate = useNavigate();
 
   const handleButtonClick = (button) => {
@@ -24,20 +23,19 @@ const LoginPage = () => {
     <div className={classes.container}>
       <h1 className={classes.header}>Exalyte</h1>
       <div className={classes.selector}>
-        <div
-          className={`${classes.selectorbuttons} ${activeButton === 'signup' ? classes.activeButton : classes.inactiveButton}`}
-          onClick={() => handleButtonClick('signup')}
+        <button
+          className={`${classes.selectorbuttons} ${activeButton === 'Signup' ? classes.activeButton : classes.inactiveButton}`}
+          onClick={() => handleButtonClick('Signup')}
         >
           Sign Up
-        </div>
-        <div
-          className={`${classes.selectorbuttons} ${activeButton === 'login' ? classes.activeButton : classes.inactiveButton}`}
-          onClick={() => handleButtonClick('login')}
+        </button>
+        <button
+          className={`${classes.selectorbuttons} ${activeButton === 'Login' ? classes.activeButton : classes.inactiveButton}`}
+          onClick={() => handleButtonClick('Login')}
         >
           Log In
-        </div>
+        </button>
       </div>
-      
     </div>
   );
 };
