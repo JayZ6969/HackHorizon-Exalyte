@@ -25,6 +25,27 @@ const CreateTest = () => {
     // Handle file upload logic here
   };
 
+  const handleSubmit = (event) => {
+    event.preventDefault();
+    const doc = new jsPDF();
+
+    doc.text(`Test Name: ${testName}`, 10, 10);
+    doc.text(`Type of Questions: ${questionType}`, 10, 20);
+    if (questionType !== 'descriptive') {
+      doc.text(`Number of MCQ Questions: ${numMCQ}`, 10, 30);
+    }
+    if (questionType !== 'mcq') {
+      doc.text(`Number of Descriptive Questions: ${numDescriptive}`, 10, 40);
+    }
+    doc.text(`Difficulty: ${difficulty}`, 10, 50);
+    doc.text(`Total Marks: ${totalMarks}`, 10, 60);
+    doc.text(`Test Duration: ${duration} minutes`, 10, 70);
+    doc.text(`Questions: ${questions}`, 10, 80);
+
+    const pdfBlob = doc.output('blob');
+    setPdf(URL.createObjectURL(pdfBlob));
+  };
+
   return (
     <div className={classes.container}>
       <form className={classes.container} onSubmit={handleSubmit}>
