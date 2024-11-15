@@ -43,6 +43,9 @@ const features = [
       'Set your test’s start time or go live immediately. Control the duration and availability, so students can complete assessments on your schedule.',
   },
 ];
+const handleJoinTestClick = () => {
+    navigate('/join');
+  };
 
 const Landing = () => {
   return (
@@ -59,8 +62,8 @@ const Landing = () => {
           </div>
         </div>
         <div className={classes.buttons}>
-          <div className={classes.button1}>Join test</div>
-          <div className={classes.button2}>Get Started</div>
+          <button className={classes.button1}><a href='/Join'>Join test</a></button>
+          <button className={classes.button2}><a href='/Signup'>Get Started</a></button>
         </div>
       </div>
       <div className={classes.features}>
