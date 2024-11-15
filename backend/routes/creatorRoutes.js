@@ -14,5 +14,6 @@ creatorRouter.post('/login', creatorController.login);
 creatorRouter.use(auth);
 
 creatorRouter.post('/upload', upload.single('file'), creatorController.uploadStatus);
+creatorRouter.get('/generate', creatorController.createQuestions);
 
 module.exports = creatorRouter; 

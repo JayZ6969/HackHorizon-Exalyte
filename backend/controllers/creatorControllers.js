@@ -1,8 +1,10 @@
 const bcrypt = require('bcrypt');
 const jwt = require('jsonwebtoken');
 const Creator = require('../models/creator');
+const generateQuestions = require('../gemini-integration/question-gen')
 
-
+const PDFDocument = require('pdfkit');
+const fs = require('fs');
 
 const signup = async (req, res) => {
     try {
@@ -69,8 +71,15 @@ const uploadStatus = async (req,res) => {
     }
 };
 
+const createQuestions = async (req,res) => {
+    text_result = generateQuestions();
+    res.send(text_result);
+    
+}
+
 module.exports = {
     signup,
     login,
-    uploadStatus
+    uploadStatus,
+    createQuestions
 };
