@@ -41,10 +41,6 @@ const Dashboard = () => {
           View Tests
         </div>
       </div>
-      <Routes>
-        <Route path="/createtest" element={<CreateTest />} />
-        <Route path="/viewtest" element={<ViewTest />} />
-      </Routes>
     </div>
   );
 };

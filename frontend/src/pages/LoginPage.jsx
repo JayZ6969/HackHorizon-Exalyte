@@ -38,10 +38,6 @@ const LoginPage = () => {
           Log In
         </div>
       </div>
-      <Routes>
-        <Route path="/login" element={<Login />} />
-        <Route path="/signup" element={<Signup />} />
-      </Routes>
     </div>
   );
 };
