@@ -57,7 +57,20 @@ const login = async (req, res) => {
     }
 }
 
+const uploadStatus = async (req,res) => {
+    try {
+        console.log("reached uploadstatus")
+        res.json({ 
+            message: 'File uploaded successfully',
+            filename: req.file.filename
+        });
+    } catch (error) {
+        res.status(500).send(error.message);
+    }
+};
+
 module.exports = {
     signup,
-    login
+    login,
+    uploadStatus
 };
