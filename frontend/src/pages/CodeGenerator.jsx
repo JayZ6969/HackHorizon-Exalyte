@@ -4,7 +4,7 @@ const classes = {
     container: "flex flex-col items-center justify-center bg-white gap-4 h-screen",
     div1: "text-3xl pb-[20px]",
     div: "text-3xl",
-    span: "text-blue-500",
+    span: "text-blue-600",
     h1: "text-4xl pb-[50px] font-bold",
     h2: "text-3xl py-[20px] font-bold"
 }
