@@ -13,7 +13,7 @@ const classes = {
 };
 
 const Dashboard = () => {
-  const [activeButton, setActiveButton] = useState('createtest');
+  const [activeButton, setActiveButton] = useState('CreateTest');
   const navigate = useNavigate();
   const username = "Username"; // Replace with actual username logic
 
@@ -28,14 +28,14 @@ const Dashboard = () => {
       <h1 className={classes.header2}>Welcome back {username}!</h1>
       <div className={classes.section}>
         <div
-          className={`${classes.button} ${activeButton === 'createtest' ? classes.activeButton : classes.inactiveButton}`}
-          onClick={() => handleButtonClick('createtest')}
+          className={`${classes.button} ${activeButton === 'CreateTest' ? classes.activeButton : classes.inactiveButton}`}
+          onClick={() => handleButtonClick('CreateTest')}
         >
           Create Tests
         </div>
         <div
-          className={`${classes.button} ${activeButton === 'viewtest' ? classes.activeButton : classes.inactiveButton}`}
-          onClick={() => handleButtonClick('viewtest')}
+          className={`${classes.button} ${activeButton === 'ViewTest' ? classes.activeButton : classes.inactiveButton}`}
+          onClick={() => handleButtonClick('ViewTest')}
         >
           View Tests
         </div>
